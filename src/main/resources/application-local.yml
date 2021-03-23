@@ -1,0 +1,9 @@
+server:
+  port: 1948
+
+api-factory:
+  apis:
+    subscription-service:
+      ip: http://localhost:1949
+      header-key: API-KEY
+      header-value: 180497E7E3073666EFD74874DDB2CDEBFCCEA42FDAEEB2806754B12451CDAE4D
