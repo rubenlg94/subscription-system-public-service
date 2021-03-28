@@ -15,10 +15,29 @@ Subscriptions contain this information:
 - Newsletter id corresponding to the campaign
 
 This system provides these operations:
-- Create new subscription: By sending a POST request to the public service endpoint /subscriptions with a valid model. System will return the ID of the created subscription
-- Get details of a subscription: By sending a GET request to the puclic service endpoint /subscriptions/{subscriptionId} with an existing subscription id in the Path Variable
-- Cancel a subscription: By sending a PUT request to the public service endpoint /subscriptions/{subscriptionId}/cancel or by sending a PUT request to the public service endpoint /subscriptions/cancel with two request params, the email and the campaignId
-- Get all subscriptions: By sending a GET request to the public service endpoint /subscriptions/all
+- Create new subscription: By sending a POST request to the public service endpoint 
+```sh
+/subscriptions
+``` 
+with a valid model. System will return the ID of the created subscription
+- Get details of a subscription: By sending a GET request to the puclic service endpoint
+```sh
+/subscriptions/{subscriptionId}
+``` 
+with an existing subscription id in the Path Variable
+- Cancel a subscription: By sending a PUT request to the public service endpoint 
+```sh
+/subscriptions/{subscriptionId}/cancel
+```
+or by sending a PUT request to the public service endpoint 
+```sh
+/subscriptions/cancel
+``` 
+with two request params, the email and the campaignId
+- Get all subscriptions: By sending a GET request to the public service endpoint 
+```sh
+/subscriptions/all
+```
 
 ## Installation
 
