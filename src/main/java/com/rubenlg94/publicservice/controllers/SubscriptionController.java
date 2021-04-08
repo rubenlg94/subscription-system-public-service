@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/public/subscriptions")
+@RequestMapping("/subscriptions")
 public class SubscriptionController {
 
     private final SubscriptionService subscriptionService;
@@ -16,12 +16,12 @@ public class SubscriptionController {
         this.subscriptionService = subscriptionService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<?> createSubscription(@RequestBody SubscriptionModel subscriptionModel) throws Exception {
         return ResponseEntity.status(HttpStatus.CREATED).body(subscriptionService.createSubscription(subscriptionModel));
     }
 
-    @GetMapping("/{subscriptionId}/details")
+    @GetMapping("/{subscriptionId}")
     public ResponseEntity<?> getDetailsOfSubscription(@PathVariable Long subscriptionId) {
         return ResponseEntity.ok(subscriptionService.getDetailsOfSubscription(subscriptionId));
     }
